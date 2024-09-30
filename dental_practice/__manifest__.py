@@ -13,7 +13,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            # 'dental_practice/static/src/**/*',
+             'dental_practice/static/src/**/*',
         ],
     },
     'demo': [
