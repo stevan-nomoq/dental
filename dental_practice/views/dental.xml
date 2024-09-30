@@ -43,7 +43,7 @@
             <field name="view_mode">list,form</field>
             <field name="view_id" ref="dental_treatments_list_view"/>
             <field name="view_ids"
-                   eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('dental_treatmentslist_list_view')})]"/>
+                   eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('dental_treatments_list_view')})]"/>
         </record>
 
 
