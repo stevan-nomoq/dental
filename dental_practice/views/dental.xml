@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<data>
+<odoo>
+  <data>
+        <!-- List view for Dental Patients -->
+        <record id="dental_patients_list_view" model="ir.ui.view">
+            <field name="name">Dental Patients List</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
 
-<!-- model="ir.actions.act_window.view" -->
-    <!-- Menu -->
-  <menuitem id="menu_dental" name="Dental Practice" sequence="20" web_icon="dental_practice,static/src/img/dental_practice.png"/>
-</data>
+        <record id="dental_patients_list_action" model="ir.actions.act_window">
+            <field name="name">Dental Patients</field>
+            <field name="res_model">res.partner</field>
+            <field name="domain">[('patient', '=', True)]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="dental_patients_list_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('dental_patients_list_view')})]"/>
+        </record>
+
+
+        <!-- Dashboard Item  -->
+        <menuitem id="menu_dental" name="Dental Practice" sequence="10" web_icon="dental_practice,static/src/img/dental_practice.png"/>
+        <!-- Dental Practice Menus -->
+        <menuitem id="menu_dental_patients" name="Patients" parent="menu_dental"
+                  action="dental_patients_list_action" sequence="10"/>
+  </data>
+</odoo>
