@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cavity" model="dental.diags">
+            <field name="name">Cavity</field>
+        </record>
+        <record id="chipped_tooth" model="dental.diags">
+            <field name="name">Chipped Tooth</field>
+        </record>
+        <record id="root_infection" model="dental.diags">
+            <field name="name">Root Infection</field>
+        </record>
+    </data>
+</odoo>

@@ -1,6 +1,6 @@
 {
     'name': 'Dental Practice',
-    'version': '0.2',
+    'version': '0.3',
     'summary': 'A dental practice management',
     'description': '',
     'sequence': 1,
@@ -9,7 +9,10 @@
     'depends': ['base', 'contacts', 'stock', 'sale_management', 'website', 'appointment'],
     'data': [
         'views/dental.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/res_partner_views.xml',
+        'data/treatments.xml',
+        'data/diagnostics.xml',
     ],
     'assets': {
         'web.assets_backend': [

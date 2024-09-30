@@ -6,8 +6,21 @@
             <field name="name">Dental Patients List</field>
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
+                <!-- change list to list in 4x places -->
                 <list>
                     <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- List view for Dental Treatments -->
+        <record id="dental_treatments_list_view" model="ir.ui.view">
+            <field name="name">Dental Treatments List</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="partner_id"/>
                 </list>
             </field>
         </record>
@@ -23,11 +36,23 @@
                    eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('dental_patients_list_view')})]"/>
         </record>
 
+        <!-- Action for list & form view for Dental Treatments -->
+        <record id="dental_treatments_list_action" model="ir.actions.act_window">
+            <field name="name">Dental Treatments</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" ref="dental_treatments_list_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('dental_treatmentslist_list_view')})]"/>
+        </record>
+
 
         <!-- Dashboard Item  -->
         <menuitem id="menu_dental" name="Dental Practice" sequence="10" web_icon="dental_practice,static/src/img/dental_practice.png"/>
         <!-- Dental Practice Menus -->
         <menuitem id="menu_dental_patients" name="Patients" parent="menu_dental"
                   action="dental_patients_list_action" sequence="10"/>
+        <menuitem id="menu_dental_treatments" name="Treatments" parent="menu_dental"
+                  action="dental_treatments_list_action" sequence="20"/>
   </data>
 </odoo>

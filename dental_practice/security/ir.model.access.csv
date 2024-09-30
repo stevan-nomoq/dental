@@ -1,1 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dental_diags,access.dental.diags,model_dental_diags,base.group_user,1,1,1,1
+access_dental_teeth,access.dental.teeth,model_dental_teeth,base.group_user,1,1,1,1
