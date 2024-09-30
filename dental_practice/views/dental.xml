@@ -12,11 +12,12 @@
             </field>
         </record>
 
+        <!-- Action for list & form view for Dental Patients -->
         <record id="dental_patients_list_action" model="ir.actions.act_window">
             <field name="name">Dental Patients</field>
             <field name="res_model">res.partner</field>
             <field name="domain">[('patient', '=', True)]</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="view_id" ref="dental_patients_list_view"/>
             <field name="view_ids"
                    eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('dental_patients_list_view')})]"/>
