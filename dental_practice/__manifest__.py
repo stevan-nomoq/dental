@@ -13,6 +13,7 @@
         'views/res_partner_views.xml',
         'data/treatments.xml',
         'data/diagnostics.xml',
+        'wizard/dental_wizard_views.xml'
     ],
     'assets': {
         'web.assets_backend': [

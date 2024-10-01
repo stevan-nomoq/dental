@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="dental_wizard" model="ir.ui.view">
+            <field name="name">dental.dialog.form</field>
+            <field name="model">dental.dialog</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="diag_id"/>
+                <field name="treat_id"/>
+            </field>
+        </record>
+    </data>
+</odoo>
